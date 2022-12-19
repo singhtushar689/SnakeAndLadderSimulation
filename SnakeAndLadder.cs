@@ -15,6 +15,10 @@ namespace SnakeAndLadderSimulation
             Console.WriteLine("Enter the Snake and Ladder Game");
             Console.WriteLine("Player is at position {0}", initialPosition);
 
+            Random random = new Random();
+            int rollingDice = random.Next(1, 7);
+            Console.WriteLine("Number Shown randomly on dice is {0}",rollingDice);
+
         }
     }
 }
