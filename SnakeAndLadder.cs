@@ -8,8 +8,8 @@ namespace SnakeAndLadderSimulation
 {
     public class SnakeAndLadder
     {
-        public const int ladder = 1;
-        public const int snake = 2;
+        public const int ladder = 0;
+        public const int snake = 1;
         public const int win = 100;
         public void Game()
         {
@@ -22,8 +22,11 @@ namespace SnakeAndLadderSimulation
                 int checkOption = random.Next(0, 3);
                 switch (checkOption)
                 {
-                    case ladder:                    
+                    case ladder:
+                        if (position + rollingDice <= 100)
+                        { 
                         position += rollingDice;
+                        }
                         break;
                     case snake:
                         if(position - rollingDice < 1)
